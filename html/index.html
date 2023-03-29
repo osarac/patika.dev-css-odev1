@@ -1,158 +1,207 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kitabım.com</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        a{
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <style>
+    body {
+        margin: 0;
+        font-family: Verdana, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 14px;
+        line-height: 21px;
+        display: grid;
+        background-color:azure;
+    }
+
+    a{
         text-decoration: none;
         color: #f2f2f2;
-        }
-        body {
-          margin: 0;
-          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        
-        .topnav {
-          overflow: hidden;
-          background-color: #333;
-        }
-        
-        .topnav a {
-          float: left;
-          color: #f2f2f2;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-          font-size: 17px;
-        }
-        
-        .topnav a:hover {
-          background-color: #ddd;
-          color: black;
-        }
-        
-        .topnav a.active {
-          background-color: #59ad8f;
-          color: white;
-        }
+    }
 
-        .sol{
-            border-style: groove;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            width: 265px;
-            height: 390px;
-            background-color: #5c5b5b;
-            color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
-   <div class="topnav">
-        <a class="active" href="index.html">KİTABIM.com</a>
-        <a href="about-us.html">Hakkımızda</a>
-        <a href="login.html">Login</a>
-        <a href="cart.html">Sepetim</a>
-    </div>
+    h4{
+        font-weight:bold; 
+    }
 
-    <div class="sol" style="float: left;">
-        <h3>Kitaplar</h3>
-        <div  >
-                <a href="https://www.bkmkitap.com/tubitak-yayinlari?gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaVkEoY5iity-OQsz7qJUcgDcstSDa2IDWhWbC8KoMncuPLn_dCphokaAtf2EALw_wcB" target="_blank" >> Bilim ve Teknik
-                </a>
-                <br>
-                <a href="https://www.idefix.com/kategori/Kitap/Cizgi-Roman/grupno=00053?ShowNotForSale=True" target="_blank" >> Çizgi Roman
-                </a>
-                <br>
-                <a href="https://www.bkmkitap.com/kitap/cocuk-kitaplari" target="_blank" >> Çocuk Kitapları</a>
-                <br>
-                <a href="https://www.idefix.com/kategori/Kitap/Din-Tasavvuf/grupno=00054?ShowNotForSale=True" target="_blank" >> Din</a>
-                <br>
-                <a href="https://www.idefix.com/kategori/Kitap/Edebiyat/grupno=00055?ShowNotForSale=True" target="_blank" > > Edebiyat</a>
-                <br>
-                <a href="https://www.idefix.com/kataloglar_/cok-satan-hukuk/52240?gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaXzh2Hro6i7Qxqz49OrfhYK8ax3WHnxMc_tBpJtT_9a2mJEXSjR8BAaApu7EALw_wcB&gclsrc=aw.ds" target="_blank" >> Ekonomi & İş Dünyası</a>
-                <br>
-                <a href="https://www.idefix.com/kategori/Kitap/Felsefe/grupno=00058?ShowNotForSale=True" target="_blank"> > Felsefe & Düşünce </a>
-                <br>
-                <a href="https://www.dr.com.tr/kategori/Kitap/Egitim-Basvuru/Is-Ekonomi-Hukuk/Hukuk/grupno=00468" target="_blank" > > Hukuk</a>
-                <br>
-                <a href="https://www.nadirkitap.com/osmanlica-kategori3.html" target="_blank" > > Osmanlıca</a>
-                <br>
-                <a href="nadirkitap.com/referans-ve-basvuru-kategori132.html" target="_blank" >> Referans & Başvuru</a>
-                <br>
-                <a href="https://www.nadirkitap.com/saglik-kategori141.html" target="_blank" >> Sağlık</a>
-                <br>
-                <a href="https://www.nadirkitap.com/sanat-kategori150.html" target="_blank" > > Sanat</a>
-                <br>
-                <a href="https://www.nadirkitap.com/sinav-ve-ders-kitaplari-kategori102.html" target="_blank" >> Sınav ve Ders Kitapları</a>
-                <br>
-        </div>
-    </div>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
-            <a href="https://tr.wikipedia.org/wiki/Deneysel_psikoloji" target="_blank" ><img src="/image/r1.jpg"></a>
+    .metinyazi{
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        margin: 0 auto;
+    }
+
+    .metinyazi:hover {
+        transform: scale(1.05); 
+    }
+
+    .metinlink{
+        color: black;
+    }
+    .zoom {
+        transition: transform .2s;
+        margin: 0 auto;
+    }
+    .zoom:hover {
+        transform: scale(1.05); 
+    }
+
+    .satır{
+        margin-top: 100px;
+        Justify-content: center;
+    }
+
+
+</style>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Anasayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Kategoriler
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="https://www.bkmkitap.com/tubitak-yayinlari?gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaVkEoY5iity-OQsz7qJUcgDcstSDa2IDWhWbC8KoMncuPLn_dCphokaAtf2EALw_wcB " target="_blank" >Bilim ve Teknik</a></li>
+                          <li><a class="dropdown-item" href="https://www.idefix.com/kategori/Kitap/Cizgi-Roman/grupno=00053?ShowNotForSale=True" target="_blank">Çizgi Roman</a></li>
+                          <li><a class="dropdown-item" href="https://www.bkmkitap.com/kitap/cocuk-kitaplari" target="_blank">Çocuk Kitapları</a></li>
+                          <li><a class="dropdown-item" href="https://www.idefix.com/kategori/Kitap/Din-Tasavvuf/grupno=00054?ShowNotForSale=True" target="_blank">Din</a></li>
+                          <li><a class="dropdown-item" href="https://www.idefix.com/kategori/Kitap/Edebiyat/grupno=00055?ShowNotForSale=True" target="_blank">Edebiyat</a></li>
+                          <li><a class="dropdown-item" href="https://www.idefix.com/kataloglar_/cok-satan-hukuk/52240?gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaXzh2Hro6i7Qxqz49OrfhYK8ax3WHnxMc_tBpJtT_9a2mJEXSjR8BAaApu7EALw_wcB&gclsrc=aw.ds" target="_blank">Ekonomi & İş Dünyası</a></li>
+                          <li><a class="dropdown-item" href="https://www.idefix.com/kategori/Kitap/Felsefe/grupno=00058?ShowNotForSale=True" target="_blank">Felsefe & Düşünce</a></li>
+                          <li><a class="dropdown-item" href="https://www.dr.com.tr/kategori/Kitap/Egitim-Basvuru/Is-Ekonomi-Hukuk/Hukuk/grupno=00468" target="_blank">Hukuk</a></li>
+                          <li><a class="dropdown-item" href="https://www.nadirkitap.com/osmanlica-kategori3.html" target="_blank">Osmanlıca</a></li>
+                          <li><a class="dropdown-item" href="nadirkitap.com/referans-ve-basvuru-kategori132.html" target="_blank">Referans & Başvuru</a></li>
+                          <li><a class="dropdown-item" href="https://www.nadirkitap.com/saglik-kategori141.html" target="_blank">Sağlık</a></li>
+                          <li><a class="dropdown-item" href="https://www.nadirkitap.com/sanat-kategori150.html" target="_blank">Sanat</a></li>
+                          <li><a class="dropdown-item" href="https://www.nadirkitap.com/sinav-ve-ders-kitaplari-kategori102.html" target="_blank">Sınav ve Ders Kitapları</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=https://www.millisaraylar.gov.tr/hizmetler/yazma-eserler>El Yazmaları</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.kulturportali.gov.tr/portal/hatsanati"  target="_blank">Hat Sanatı</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.sakipsabancimuzesi.org/koleksiyonlar-ve-arastirmalar/koleksiyonlar/330" target="_blank">Koleksiyon</a>
+                    </li>
+                </ul>
             </div>
-        
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
-            <a href="/html/catagories.html" target="_blank" ><img src="/image/r2.jpg"></a>
-        </div>
-        
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
-            <a href="https://ahbap.org/bagisci-ol" target="_blank"><img src="/image/r3.jpg">
-            </a>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
-            <a href="https://www.spacecampturkey.com/neden-uzaya-gidiyoruz" target="_b
-            "><img src="/image/r4.jpg"></a>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
-            <a href="https://www.bkmkitap.com/blog/osmanli-tarihini-anlatan-kitaplar" target="_blank"></a><img src="/image/r5.jpg">
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="gizlilik.html">kitabım.com</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Giriş Yap</a>   <!-- login.html de arka plan rengini unutma -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Sepetim</a>    <!-- cart.html de arka plan rengini unutma -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-sm ">
+                 <img class="w-100 mt-3 mb-3 zoom rounded-2 hover-shadow " src="/image/nil-burak_600x422.jpg" alt="">
+                 <a class="metinyazi zoom" href="https://www.youtube.com/watch?v=_Kr0Gn8gF7M">Nil Burak-Yalnızım (Ben Plak Kayıt)</a>
+              
+            </div>
+            <div class="col-sm ">
+                <img class="w-100 mt-3 mb-3 zoom rounded-2 hover-shadow"  src="/image/edvard-munch-peter-watkins-2 (1).jpg" alt="">
+                <a class="metinyazi zoom" href="https://tr.wikipedia.org/wiki/Edvard_Munch">Edvard Munch – 1974 – Peter Watkins</a>
+            </div>
+        </div>
+
+        <div class="row satır">
+            <div class="col-xl-3 mx-auto zoom ">
+                <a class="metinlink" href="https://www.youtube.com/watch?v=fPK3SyTADZQ" target="_blank">
+                <img class=" mt-3 mb-3 rounded-2 hover-shadow" src="/image/william.jpg" width="300" height="300" alt="William Blake">
+                <h4>Kaplan! Kaplan! William Blake</h4>
+                <p>Kaplan! Kaplan! gecenin ormanında <br>
+                    Işıl ışıl yanan parlak yalaza, <br>
+                    Hangi ölümsüz el ya da göz, hangi, <br>
+                    Kurabildi o korkunç simetrini?<br>
+                </p>
+                </a>
+            </div>
+
+            <div class="col-xl-3 mx-auto zoom">
+                <a class="metinlink" href="https://www.beyazperde.com/filmler/film-7546/">
+                <img class=" mt-3 mb-3 rounded-2 hover-shadow" src="/image/Woman-in-the-Dunes-izle-236x350.jpg" width="300" height="300" alt="Woman in the Dunes">
+                <h4>Woman in the Dunes (Kumların Kadını) – 1964</h4>
+                <p>Amatör bir böcek bilimci, uçsuz bucaksız bir çölde bulunan sınıflandırılmamış bir böcek türünü incelemek için Tokyo’dan ayrılır. Şehre dönüş otobüsünü kaçırdığında, geceyi genç bir kadın ile bir kum tepesinin yanındaki kulübesinde geçirmeye ikna edilir ve köyün sakinleri tarafından esir alınır.</p>
+                </a>
+            </div>
+
+            <div class="col-xl-3 mx-auto zoom">
+                <a class="metinlink" href="https://serbestiyet.com/gunun-yazilari/onemli-olan-dusus-degil-yere-carpistir-91408/" target="_blank">    
+                    <img class=" mt-3 mb-3 rounded-2 hover-shadow" src="/image/la-haine-50-kattan.jpg" width="300" height="300" alt="la haine">
+                    <h4>50. kattan düşen adamın hikayesi – la haine </h4>
+                    <p>50 katlık bir binadan düşen adamın hikayesini biliyor musun? her katta kendini rahatlatmak için şunu demiş “buraya kadar her şey yolunda. buraya kadar her şey yolunda…”sanki bizi anlatıyor gibi.. Önemli olan düşüş değil, yere çarpıştır.
+                    </p>
+                </a>
+            </div>
+
+            <div class="col-xl-3 mx-auto zoom">
+                <a class="metinlink" href="https://evrimagaci.org/eser/kozmos-329" target="_blank">    
+                    <img class=" mt-3 mb-3 rounded-2 hover-shadow" src="/image/k2.jpg" width="300" height="300" alt="la haine">
+                    <h4>Karanlık Bir Dünyada Bilimin Mum Isıgı</h4>
+                    <p>Bilimsel düşünce insana hakikat ile refah vaat etti ve bu vaadini yerine getirdiği için insanlığın büyük kısmı tarafından kılavuz olarak kabul edildi. Fakat bilimin ışığı, çevresini saran karanlığın büyüklüğü karşısında bir mum alevi kadar cılız ve savunmasız. Bu alevin sönmemesi için bilim insanlarının bu karanlıkla ve ondan çıkar sağlayanlarla mücadeleyi sürdürmesi gerek...
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="row satır">
+            <div class="col-xl-3 mx-auto zoom ">
+                <a class="metinlink" href="https://www.mihrimahsahaf.com/zenit-et-analog-fotograf-makinesi-incelemesi/" target="_blank">
+                <img class=" mt-3 mb-3 rounded-2 hover-shadow" src="/image/zenit.png" width="300" height="300" alt="zenit">
+                <h4>Zenit ET Analog Fotoğraf Makinesi İncelemesi</h4>
+                <p>Analog fotoğrafçılığa yeni başlayacak olan hemen hemen herkesin araştırdığında karşısına ilk önce çıkan marka Zenit oluyor. Bunun başlıca sebepleri kolay bulunabiliyor ve makul fiyatlarda olması.
+                </p>
+                </a>
+            </div>
+
+            <div class="col-xl-3 mx-auto zoom">
+                <a class="metinlink" href="https://ilerigeridergi.com/edebiyat/beyaz-geceler-kitap-incelemesi/">
+                <img class=" mt-3 mb-3 rounded-2 hover-shadow" src="/image/beyaz.jpg" width="300" height="300" alt="Dostoyevski">
+                <h4>Ilya Glazunov – Dostoyevski, Beyaz Geceler</h4>
+                <p>Ilya Glazunov (Rusça:Илья Глазунов; 10 Haziran 1930 – 9 Temmuz 2017), Rus ressam. 1930 yılında Leningrad‘ta doğdu. Eserlerinde çoğunlukla dini ve tarihi temaları tercih etti. Rus yazar Fyodor Dostoyevski‘den esinlenen çalışmaları ile yaygınca tanındı. 3 binden fazla eser bıraktı. En çok tanınan Rus ressamlardan olan Glazunov, Rusya Güzel Sanatlar Akademisi kurucu üyesi ve rektörüydü.</p>
+                </a>
+            </div>
+
+            <div class="col-xl-3 mx-auto zoom">
+                <a class="metinlink" href="https://www.mihrimahsahaf.com/trocki-goethe-ve-mutluluk/" target="_blank">    
+                    <img class=" mt-3 mb-3 rounded-2 hover-shadow" src="/image/trocki.jpg" width="300" height="300" alt="trocki">
+                    <h4>troçki, goethe ve mutluluk</h4>
+                    <p>50 katlık bir binadan düşen adamın hikayesini biliyor musun? her katta kendini rahatlatmak için şunu demiş “buraya kadar her şey yolunda. buraya kadar her şey yolunda…”sanki bizi anlatıyor gibi.. Önemli olan düşüş değil, yere çarpıştır.
+                    </p>
+                </a>
+            </div>
+
+            <div class="col-xl-3 mx-auto zoom">
+                <a class="metinlink" href="https://evrimagaci.org/eser/kozmos-329" target="_blank">    
+                    <img class=" mt-3 mb-3 rounded-2 hover-shadow" src="/image/cemal-resit-rey-2.jpg" width="300" height="300" alt="mezarlık">
+                    <h4>Cemal Reşit Rey – Hatıradan İbaret Şehirde Gezintiler – Mezarlık</h4>
+                    <p>Cemal Reşit Rey, 1904 – 1985. Çoksesli müziğimizin öncüleri arasında yer alır. Türk Beşleri olarak anılan grubun üyesidir. Besteciliği kadar eğitimci, piyano pedagogu, piyanist, orkestra yöneticisi ve İstanbul Şehir Orkestrası’nın kurucusu olarak Türk müzik tarihine geçmiştir. Babası, Servet-i Fünun Dergisi‘nde H. Nazım takma adıyla yazan, Edebiyat-ı Cedide’nin tanınmış bir yazarı, Ahmed Reşid Bey‘dir. Çok küçük yaşta mızıka ile şarkılar çalmaya başlamış, ilk piyano derslerini annesinden almış ve sekiz yaşında bir vals bestelemiştir.
+                    </p>
+                </a>
+            </div>
+        </div>
+        
     </div>
-    <br>
-    <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-                slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-            setTimeout(showSlides, 3000); // Change image every 2 seconds
-        }
-    </script>
-    <aside></aside>
-    <footer> Copyright 2007-2023 Tüm Hakları Saklıdır. Bu siteye üye olanlar Kullanıcı Sözleşmesini okumuş ve kabul etmiş sayılırlar.
-
-    Bilgilendirme! Çerezler deneyiminizi iyileştirmek için kullanılmaktadır.</footer>
-    
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
 </html>
